@@ -3,7 +3,7 @@ public class ArrayUtils {
     /**
      * Find last index of element
      *
-     * @param x array to search
+     * @param x array to searchs
      * @param y value to look for
      * @return last index of y in x; -1 if absent
      * @throws NullPointerException if x is null
