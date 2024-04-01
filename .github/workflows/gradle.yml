@@ -50,6 +50,8 @@ jobs:
           author_name: 'GitHub Actions'
           author_email: 'actions@github.com'
           push: true
+          github_token: ${{ secrets.CI_GITHUB_TOKEN }}
+          
           
 
   build_and_publish_docker_image:
