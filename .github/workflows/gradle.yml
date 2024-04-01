@@ -44,13 +44,10 @@ jobs:
           fail-on-branches-decrease: true
       - name: Commit Coverage Summary
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'jcui19@jhu.edu'
           git add .github/badges/coverage-summary.json
           git commit -m "Update coverage summary"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
+
 
           
 
