@@ -43,12 +43,13 @@ jobs:
           fail-on-coverage-decrease: true
           fail-on-branches-decrease: true
       - name: Commit Coverage Summary
-        run: |
-          git add .github/badges/coverage-summary.json
-          git commit -m "Update coverage summary"
-          git push
-
-
+        uses: EndBug/add-and-commit@v9.1.4
+        with:
+          add: '.github/badges/coverage-summary.json'
+          message: 'Update coverage summary'
+          author_name: 'GitHub Actions'
+          author_email: 'actions@github.com'
+          push: true
           
 
   build_and_publish_docker_image:
