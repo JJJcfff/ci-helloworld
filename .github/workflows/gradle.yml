@@ -37,7 +37,8 @@ jobs:
         uses: cicirello/jacoco-badge-generator@v2.9.0
         with:
           jacoco-csv-file: build/reports/jacoco/test/jacocoTestReport.csv
-          badges-directory: .github/badgesgenerate-summary: true
+          badges-directory: .github/badges
+          generate-summary: true
           summary-filename: coverage-summary.json
           fail-on-coverage-decrease: true
           fail-on-branches-decrease: true
@@ -49,7 +50,7 @@ jobs:
           git commit -m "Update coverage summary"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
 
           
 
