@@ -45,7 +45,7 @@ jobs:
       - name: Commit Coverage Summary
         run: |
           git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
+          git config --global user.email 'jcui19@jhu.edu'
           git add .github/badges/coverage-summary.json
           git commit -m "Update coverage summary"
           git push
