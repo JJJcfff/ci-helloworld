@@ -5,9 +5,10 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
-  # permissions:
-  # contents: read
+    
+permissions:
+  contents: read
+  contents: write
 
 jobs:
   build_and_test:
@@ -50,7 +51,6 @@ jobs:
           author_name: 'GitHub Actions'
           author_email: 'actions@github.com'
           push: true
-          github_token: ${{ secrets.CI_GITHUB_TOKEN }}
           
           
 
